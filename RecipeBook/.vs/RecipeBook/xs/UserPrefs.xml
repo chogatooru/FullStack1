@@ -1,22 +1,32 @@
 ﻿<Properties StartupConfiguration="{DD0A3B96-25E9-4099-8984-9942E1F7AC23}|Default">
-  <MonoDevelop.Ide.ItemProperties.RecipeBook FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.RecipeBook PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="RecipeBook/Controllers/WeatherForecastController.cs">
+    <Files>
+      <File FileName="RecipeBook/Program.cs" Line="16" Column="27" />
+      <File FileName="RecipeBook/appsettings.json" Line="9" Column="5" />
+      <File FileName="RecipeBook/appsettings.Development.json" Line="10" Column="2" />
+      <File FileName="RecipeBook/Controllers/WeatherForecastController.cs" Line="30" Column="37" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="RecipeBook" expanded="True">
+          <Node name="RecipeBook">
             <Node name="RecipeBook">
-              <Node name="Dependencies" expanded="True" selected="True">
-                <Node name="FrameworkReferences" expanded="True" />
+              <Node name="Controllers">
+                <Node name="WeatherForecastController.cs" selected="True" />
               </Node>
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

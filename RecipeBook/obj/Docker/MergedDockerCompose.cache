@@ -1,0 +1,35 @@
+name: dockercompose15915343772673404756
+services:
+  recipebook:
+    build:
+      context: /Users/tobi/Documents/GitHub/FullStack1/RecipeBook
+      dockerfile: RecipeBook/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: recipebook
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /Users/tobi/.aspnet/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /Users/tobi/.microsoft/usersecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose15915343772673404756_default

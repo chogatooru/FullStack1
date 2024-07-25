@@ -12,12 +12,12 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
-    private readonly IConfiguration? _configuration;
+    private readonly IConfiguration _configuration;
 
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger,IConfiguration configuration)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration configuration)
     {
         _logger = logger;
+        _configuration = configuration; // 初始化 _configuration
     }
 
     [HttpGet]
@@ -26,7 +26,6 @@ public class WeatherForecastController : ControllerBase
         var rng = new Random();
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
-            
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             TemperatureC = rng.Next(-20, 55),
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
@@ -40,4 +39,3 @@ public class WeatherForecastController : ControllerBase
         return _configuration.GetValue<string>("ApiKey");
     }
 }
-

@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD0A3B96-25E9-4099-8984-9942E1F7AC23}|RecipeBook\\RecipeBook.csproj|\\\\mac\\home\\documents\\github\\fullstack1\\recipebook\\recipebook\\controllers\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD0A3B96-25E9-4099-8984-9942E1F7AC23}|RecipeBook\\RecipeBook.csproj|\\\\mac\\home\\documents\\github\\fullstack1\\recipebook\\recipebook\\businesslogic\\recipebusinesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD0A3B96-25E9-4099-8984-9942E1F7AC23}|RecipeBook\\RecipeBook.csproj|\\\\mac\\home\\documents\\github\\fullstack1\\recipebook\\recipebook\\dataaccess\\recipedataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD0A3B96-25E9-4099-8984-9942E1F7AC23}|RecipeBook\\RecipeBook.csproj|\\\\mac\\home\\documents\\github\\fullstack1\\recipebook\\recipebook\\models\\recipemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6CE9907-E4E8-449E-9414-50FFFFDD62C0}|docker-compose.dcproj|\\\\mac\\home\\documents\\github\\fullstack1\\recipebook\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecipeBusinessLogic.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\RecipeBook\\BusinessLogic\\RecipeBusinessLogic.cs",
+              "RelativeDocumentMoniker": "RecipeBook\\BusinessLogic\\RecipeBusinessLogic.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\RecipeBook\\BusinessLogic\\RecipeBusinessLogic.cs",
+              "RelativeToolTip": "RecipeBook\\BusinessLogic\\RecipeBusinessLogic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T05:45:32.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecipeDataAccess.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\RecipeBook\\DataAccess\\RecipeDataAccess.cs",
+              "RelativeDocumentMoniker": "RecipeBook\\DataAccess\\RecipeDataAccess.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\RecipeBook\\DataAccess\\RecipeDataAccess.cs",
+              "RelativeToolTip": "RecipeBook\\DataAccess\\RecipeDataAccess.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T05:43:28.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecipeModel.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\RecipeBook\\Models\\RecipeModel.cs",
+              "RelativeDocumentMoniker": "RecipeBook\\Models\\RecipeModel.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\RecipeBook\\Models\\RecipeModel.cs",
+              "RelativeToolTip": "RecipeBook\\Models\\RecipeModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T05:41:19.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\RecipeBook\\Controllers\\Recipe.cs",
+              "RelativeDocumentMoniker": "RecipeBook\\Controllers\\Recipe.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\RecipeBook\\Controllers\\Recipe.cs",
+              "RelativeToolTip": "RecipeBook\\Controllers\\Recipe.cs",
+              "ViewState": "AQIAAAUAAACAmpmZmZkOwAwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T05:31:58.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\FullStack1\\RecipeBook\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-07-25T02:54:50.408Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

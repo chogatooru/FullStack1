@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{5FBFA772-E4C2-464F-9503-D808A1484EA1}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Core6 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Core6/Entities/ProductEntity.cs" />
+      <File FileName="Core6/Context/ApplicationDbContext.cs" />
+      <File FileName="Core6/Program.cs" Line="21" Column="1" />
+      <File FileName="Core6/appsettings.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Core6" expanded="True">
+            <Node name="Core6">
+              <Node name="Dependencies" selected="True" />
+              <Node name="Entities" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

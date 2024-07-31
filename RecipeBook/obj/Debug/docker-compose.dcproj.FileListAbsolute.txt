@@ -1,6 +1,0 @@
-/Users/tobi/Documents/GitHub/FullStack1/RecipeBook/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
-//Mac/Home/Documents/GitHub/FullStack1/RecipeBook/bin/Debug/RecipeBook.dll
-//Mac/Home/Documents/GitHub/FullStack1/RecipeBook/bin/Debug/RecipeBook.pdb
-//Mac/Home/Documents/GitHub/FullStack1/RecipeBook/obj/Debug/docker-compose.dcproj.AssemblyReference.cache
-//Mac/Home/Documents/GitHub/FullStack1/RecipeBook/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
-//Mac/Home/Documents/GitHub/FullStack1/RecipeBook/obj/Debug/docker-c.35A3FFBA.Up2Date

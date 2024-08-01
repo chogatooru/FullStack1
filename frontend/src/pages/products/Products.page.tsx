@@ -42,9 +42,6 @@ const Products: React.FC = () => {
   // const redirectToEditPage = (id: string) => {
   //   redirect(`/products/edit/${id}`);
   // };
-  const deleteProduct = (id: string) => {
-    redirect(`/products/edit/${id}`);
-  };
 
   return (
     <div className="table-wrapper">
@@ -77,7 +74,7 @@ const Products: React.FC = () => {
                 </Button>
               </td>
               <td>
-                <Button variant="outlined" color="error">
+                <Button variant="outlined" color="error" onClick={() => redirect(`/products/delete/${product.id}`)}>
                   <Delete />
                 </Button>
               </td>

@@ -2494,11 +2494,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tobi/Projects/Core6/Core6/Core6.csproj",
+      "projectUniqueName": "/Users/tobi/Documents/GitHub/FullStack1/Core6/Core6/Core6.csproj",
       "projectName": "Core6",
-      "projectPath": "/Users/tobi/Projects/Core6/Core6/Core6.csproj",
+      "projectPath": "/Users/tobi/Documents/GitHub/FullStack1/Core6/Core6/Core6.csproj",
       "packagesPath": "/Users/tobi/.nuget/packages/",
-      "outputPath": "/Users/tobi/Projects/Core6/Core6/obj/",
+      "outputPath": "/Users/tobi/Documents/GitHub/FullStack1/Core6/Core6/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/tobi/.nuget/NuGet/NuGet.Config"

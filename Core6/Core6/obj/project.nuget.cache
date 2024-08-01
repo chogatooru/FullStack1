@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9H9mtZ5Kch0=",
+  "dgSpecHash": "w9ihTZ/FhH4=",
   "success": true,
-  "projectFilePath": "/Users/tobi/Projects/Core6/Core6/Core6.csproj",
+  "projectFilePath": "/Users/tobi/Documents/GitHub/FullStack1/Core6/Core6/Core6.csproj",
   "expectedPackageFiles": [
     "/Users/tobi/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/tobi/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

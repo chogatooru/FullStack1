@@ -1,11 +1,24 @@
-import React from 'react';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home.page";
+import Products from "./pages/products/Products.page";
 
+const App: React.FC = () => {
+  return (
+    <div>
+      {/* Navbar */}
+      <Navbar />
 
-const App: React.FC = () =>{
-    return(
-        <div>
-            <h1>React Webpack Typescript</h1>
-        </div>
-    );
-}
+      {/* Wrapper */}
+      <div className="wrapper"></div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products">
+          <Route index element={<Products />} />
+        </Route>
+      </Routes>
+    </div>
+  );
+};
 export default App;

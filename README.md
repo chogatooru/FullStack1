@@ -1,0 +1,1 @@
+This is a simple product management application built with React, TypeScript, and Material-UI on the frontend, and .NET Core with Entity Framework on the backend. The application allows users to view, add, edit, and delete products.

@@ -37,6 +37,10 @@ const Navbar: React.FC<NavbarProps> = ({ setMode, mode }) => {
     setAnchorEl(null);
   };
 
+  const handleModeSwitch = () => {
+    setMode(mode === "light" ? "dark" : "light");
+  };
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -46,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ setMode, mode }) => {
         >
           PetPaw Diaries
         </Typography>
-        <Pets sx={{ display: { xs: "block", sm: "none" } }} />
+        <Pets sx={{ display: { xs: "block", sm: "none" } }} data-testid="PetsIcon" />
         <Hidden smDown>
           <div style={{ display: "flex", alignItems: "center" }}>
             <Link
@@ -79,11 +83,9 @@ const Navbar: React.FC<NavbarProps> = ({ setMode, mode }) => {
             >
               Add New Post
             </Link>
-            <IconButton>
+            <IconButton onClick={handleModeSwitch}>
               <Brightness4Icon />
-              <Switch
-                onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              />
+              <Switch aria-label="theme-switch" checked={mode === "dark"} />
             </IconButton>
           </div>
         </Hidden>
@@ -134,11 +136,9 @@ const Navbar: React.FC<NavbarProps> = ({ setMode, mode }) => {
               Add New Post
             </Link>
           </MenuItem>
-          <MenuItem onClick={handleClose}>
+          <MenuItem onClick={handleModeSwitch}>
             <Brightness4Icon />
-            <Switch
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            />
+            <Switch aria-label="theme-switch" checked={mode === "dark"} />
           </MenuItem>
         </Menu>
       </StyledToolbar>

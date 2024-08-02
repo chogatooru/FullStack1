@@ -1,27 +1,29 @@
 ﻿<Properties StartupConfiguration="{5FBFA772-E4C2-464F-9503-D808A1484EA1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core6/Controllers/ProductsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core6/appsettings.json">
     <Files>
-      <File FileName="Core6/Entities/ProductEntity.cs" Line="16" Column="1" />
-      <File FileName="Core6/Context/ApplicationDbContext.cs" Line="1" Column="1" />
+      <File FileName="Core6/Entities/ProductEntity.cs" Line="17" Column="1" />
+      <File FileName="Core6/Context/ApplicationDbContext.cs" Line="15" Column="1" />
       <File FileName="Core6/Program.cs" Line="43" Column="1" />
-      <File FileName="Core6/appsettings.json" Line="10" Column="84" />
-      <File FileName="Core6/Properties/launchSettings.json" />
+      <File FileName="Core6/appsettings.json" Line="16" Column="1" />
+      <File FileName="Core6/Properties/launchSettings.json" Line="1" Column="1" />
       <File FileName="Core6/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="Core6/docker-compose.yml" Line="1" Column="1" />
-      <File FileName="Core6/Controllers/ProductsController.cs" Line="39" Column="66" />
-      <File FileName="Core6/Dtos/CreateUpdateProductDto.cs" Line="1" Column="1" />
+      <File FileName="Core6/docker-compose.yml" Line="11" Column="27" />
+      <File FileName="Core6/Controllers/ProductsController.cs" Line="87" Column="1" />
+      <File FileName="Core6/Dtos/CreateUpdateProductDto.cs" Line="5" Column="30" />
+      <File FileName="Core6/Dockerfile" Line="1" Column="1" />
+      <File FileName="Core6/Migrations/ApplicationDbContextModelSnapshot.cs" Line="46" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Core6" expanded="True">
+          <Node name="Core6">
             <Node name="Core6">
-              <Node name="Context" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="ProductsController.cs" selected="True" />
+              <Node name="Context">
+                <Node name="ApplicationDbContext.cs" selected="True" />
               </Node>
               <Node name="Dtos" expanded="True" />
               <Node name="Entities" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
@@ -29,11 +31,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Core6 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

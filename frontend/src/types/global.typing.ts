@@ -1,7 +1,8 @@
-export interface IProduct{
+export interface IBlogPost {
     id: number;
     title: string;
-    brand: string;
+    content: string;
     createdAt: string;
     updatedAt: string;
-}
+  }
+  

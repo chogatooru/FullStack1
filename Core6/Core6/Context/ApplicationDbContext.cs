@@ -10,7 +10,8 @@ namespace Core6.Context
         {
         }
 
-        public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<BlogPostEntity> BlogPosts { get; set; }
     }
+
 }
 

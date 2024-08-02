@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, TextField, Box, Typography, Card, CardContent, CardActions } from "@mui/material";
+import { Button, TextField, Box, Typography, Card, CardContent, CardActions, Avatar } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { IBlogPost } from "../types/global.typing";
@@ -14,7 +14,7 @@ const EditBlogPost: React.FC = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setBlogPost({ ...blogPost, [e.target.name]: e.target.value });
   };
 
@@ -51,16 +51,19 @@ const EditBlogPost: React.FC = () => {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Box sx={{ p: 3 }}>
-        <Typography variant="h4" gutterBottom>
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
+      <Box sx={{ width: '100%', maxWidth: 800 }}>
+        <Typography variant="h4" gutterBottom align="center">
           Edit Blog Post
         </Typography>
-        <Card sx={{ mb: 3 }}>
+        <Card>
           <CardContent>
-            <Typography variant="h5" sx={{ mb: 2 }}>
-              {blogPost.title}
-            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+              <Avatar sx={{ width: 56, height: 56, mr: 2 }} />
+              <Typography variant="h6">
+                {blogPost.title || "Untitled"}
+              </Typography>
+            </Box>
             <TextField
               autoComplete="off"
               label="Title"
@@ -79,10 +82,12 @@ const EditBlogPost: React.FC = () => {
               value={blogPost.content}
               onChange={changeHandler}
               fullWidth
+              multiline
+              minRows={10}
               sx={{ mb: 2 }}
             />
           </CardContent>
-          <CardActions>
+          <CardActions sx={{ justifyContent: 'center', p: 2 }}>
             <Button variant="contained" color="primary" onClick={handleSaveBtnClick}>
               Save
             </Button>
@@ -90,6 +95,7 @@ const EditBlogPost: React.FC = () => {
               variant="outlined"
               color="secondary"
               onClick={handleBackBtnClick}
+              sx={{ ml: 2 }}
             >
               Back
             </Button>
@@ -102,13 +108,14 @@ const EditBlogPost: React.FC = () => {
           paddingBottom: "1rem",
           marginTop: "auto",
           width: "100%",
+          textAlign: "center",
         }}
       >
-        <Typography variant="body2" color="textSecondary" textAlign={"center"}>
+        <Typography variant="body2" color="textSecondary">
           &copy; 2024 Powered by Monica.
         </Typography>
       </footer>
-    </div>
+    </Box>
   );
 };
 

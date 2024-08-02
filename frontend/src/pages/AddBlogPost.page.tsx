@@ -1,9 +1,9 @@
 import React from "react";
-import { TextField, Button, Box, Typography, Card, CardContent, CardActions } from "@mui/material";
-import { IBlogPost } from "../types/global.typing";
+import { TextField, Button, Box, Typography, Card, CardContent, CardActions, Avatar } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../constants/url.constant";
+import { IBlogPost } from "../types/global.typing";
 
 const AddBlogPost: React.FC = () => {
   const [blogPost, setBlogPost] = React.useState<Partial<IBlogPost>>({
@@ -12,7 +12,7 @@ const AddBlogPost: React.FC = () => {
   });
   const navigate = useNavigate();
 
-  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setBlogPost({ ...blogPost, [e.target.name]: e.target.value });
   };
 
@@ -42,18 +42,27 @@ const AddBlogPost: React.FC = () => {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Box sx={{ p: 3, flex: 1 }}>
-        <Typography variant="h4" gutterBottom>
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', p: 2 }}>
+      <Box sx={{ width: '100%', maxWidth: 800 }}>
+        <Typography variant="h4" gutterBottom align="center">
           Add New Blog Post
         </Typography>
         <Card>
           <CardContent>
+            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+              <Avatar
+                alt="Author Avatar"
+                sx={{ width: 56, height: 56, mr: 2 }}
+              />
+              <Typography variant="h6">
+                {blogPost.title || " "}
+              </Typography>
+            </Box>
             <TextField
               autoComplete="off"
               label="Title"
-              variant="outlined"
               name="title"
+              variant="outlined"
               value={blogPost.title}
               onChange={changeHandler}
               fullWidth
@@ -62,15 +71,17 @@ const AddBlogPost: React.FC = () => {
             <TextField
               autoComplete="off"
               label="Content"
-              variant="outlined"
               name="content"
+              variant="outlined"
               value={blogPost.content}
               onChange={changeHandler}
               fullWidth
+              multiline
+              minRows={10} // Increased size for better typing experience
               sx={{ mb: 2 }}
             />
           </CardContent>
-          <CardActions>
+          <CardActions sx={{ justifyContent: 'center' , p: 2 }}>
             <Button variant="contained" color="primary" onClick={handleSaveBtnClick}>
               Save
             </Button>
@@ -78,6 +89,7 @@ const AddBlogPost: React.FC = () => {
               variant="outlined"
               color="secondary"
               onClick={handleBackBtnClick}
+              sx={{ ml: 2 }}
             >
               Back
             </Button>
@@ -90,13 +102,14 @@ const AddBlogPost: React.FC = () => {
           paddingBottom: "1rem",
           marginTop: "auto",
           width: "100%",
+          textAlign: "center",
         }}
       >
-        <Typography variant="body2" color="textSecondary" textAlign={"center"}>
+        <Typography variant="body2" color="textSecondary">
           &copy; 2024 Powered by Monica.
         </Typography>
       </footer>
-    </div>
+    </Box>
   );
 };
 

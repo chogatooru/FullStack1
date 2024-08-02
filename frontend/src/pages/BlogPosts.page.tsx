@@ -1,17 +1,19 @@
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
 import { baseUrl } from "../constants/url.constant";
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Typography, Avatar } from "@mui/material";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Edit, Delete } from "@mui/icons-material";
 import moment from "moment";
 import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 import { IBlogPost } from "../types/global.typing";
 
+
 const BlogPosts: React.FC = () => {
   const [blogPosts, setBlogPosts] = useState<IBlogPost[]>([]);
   const location = useLocation();
-  const redirect = useNavigate();
+  const navigate = useNavigate();
 
   const fetchBlogPosts = async () => {
     try {
@@ -22,11 +24,15 @@ const BlogPosts: React.FC = () => {
           icon: "success",
           title: location?.state?.message,
         });
-        redirect("/blogposts", { replace: true, state: {} });
+        navigate("/blogposts", { replace: true, state: {} });
       }
     } catch (error) {
-      console.log(error);
-      alert("Error");
+      console.error("Fetch error:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Error fetching blog posts",
+        text: "An error occurred while fetching the blog posts. Please try again later.",
+      });
     }
   };
 
@@ -34,72 +40,79 @@ const BlogPosts: React.FC = () => {
     fetchBlogPosts();
   }, []);
 
+  const columns: GridColDef[] = [
+    {
+      field: "avatar",
+      headerName: "",
+      width: 80,
+      renderCell: () => (
+        <Avatar sx={{ width: 40, height: 40 }} />
+      ),
+    },
+    {
+      field: "title",
+      headerName: "Title",
+      width: 200,
+      renderCell: (params) => (
+        <Typography noWrap>{params.row.title}</Typography>
+      ),
+    },
+    {
+      field: "content",
+      headerName: "Content",
+      width: 600,
+      renderCell: (params) => (
+        <Typography noWrap>{params.row.content}</Typography>
+      ),
+    },
+    {
+      field: "edit",
+      headerName: "",
+      width: 100,
+      renderCell: (params) => (
+        <Button
+          variant="outlined"
+          color="warning"
+          onClick={() => navigate(`/blogposts/edit/${params.row.id}`)}
+        >
+          <Edit />
+        </Button>
+      ),
+    },
+    {
+      field: "delete",
+      headerName: "",
+      width: 100,
+      renderCell: (params) => (
+        <Button
+          variant="outlined"
+          color="error"
+          onClick={() => navigate(`/blogposts/delete/${params.row.id}`)}
+        >
+          <Delete />
+        </Button>
+      ),
+    },
+    {
+      field: "updatedAt",
+      headerName: "Updated At",
+      width: 150,
+      renderCell: (params) => (
+        <Typography>{moment(params.row.updatedAt).fromNow()}</Typography>
+      ),
+    },
+  ];
+
   return (
-    <div
-      style={{
-        overflowX: "auto",
-        margin: "2rem",
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <table style={{ width: "100%", borderCollapse: "collapse" }}>
-        <thead>
-          <tr>
-            <th style={{ border: "1px solid #ddd", padding: "8px" }}>Title</th>
-            <th style={{ border: "1px solid #ddd", padding: "8px" }}>
-              Content
-            </th>
-            <th style={{ border: "1px solid #ddd", padding: "8px" }}>
-              Updated At
-            </th>
-            <th style={{ border: "1px solid #ddd", padding: "8px" }}>Edit</th>
-            <th style={{ border: "1px solid #ddd", padding: "8px" }}>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {blogPosts.length > 0 ? (
-            blogPosts.map((blogPost) => (
-              <tr key={blogPost.id}>
-                <td style={{ border: "1px solid #ddd", padding: "8px" }}>
-                  {blogPost.title}
-                </td>
-                <td style={{ border: "1px solid #ddd", padding: "8px" }}>
-                  {blogPost.content}
-                </td>
-                <td style={{ border: "1px solid #ddd", padding: "8px" }}>
-                  {moment(blogPost.updatedAt).fromNow()}
-                </td>
-                <td style={{ border: "1px solid #ddd", padding: "8px" }}>
-                  <Button
-                    variant="outlined"
-                    color="warning"
-                    onClick={() => redirect(`/blogposts/edit/${blogPost.id}`)}
-                  >
-                    <Edit />
-                  </Button>
-                </td>
-                <td style={{ border: "1px solid #ddd", padding: "8px" }}>
-                  <Button
-                    variant="outlined"
-                    color="error"
-                    onClick={() => redirect(`/blogposts/delete/${blogPost.id}`)}
-                  >
-                    <Delete />
-                  </Button>
-                </td>
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan={5} style={{ textAlign: "center", padding: "8px" }}>
-                No posts available
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
+      <Box sx={{ width: '100%', maxWidth: 1200 }}>
+        <DataGrid
+          rows={blogPosts}
+          columns={columns}
+          autoHeight
+          hideFooterSelectedRowCount
+        />
+      </Box>
       <footer
         style={{
           paddingTop: "1rem",
@@ -108,11 +121,11 @@ const BlogPosts: React.FC = () => {
           width: "100%",
         }}
       >
-        <Typography variant="body2" color="textSecondary" textAlign={"center"}>
+        <Typography variant="body2" color="textSecondary" textAlign="center">
           &copy; 2024 Powered by Monica.
         </Typography>
       </footer>
-    </div>
+    </Box>
   );
 };
 

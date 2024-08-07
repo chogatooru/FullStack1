@@ -53,9 +53,6 @@ PetPaw Diaries is a full-stack web application that provides a visually appealin
 ### Blog Posts Page
 <img width="1501" alt="Screenshot 2024-08-03 at 11 29 53 AM" src="https://github.com/user-attachments/assets/deae03c1-8899-4e84-b3c8-60452b4bd900">
 
-### Edit Blog Page
-<img width="1501" alt="Screenshot 2024-08-03 at 11 30 13 AM" src="https://github.com/user-attachments/assets/f57b5414-c6fa-486a-9d0e-c628207e2ff5">
-
 ### Responsive UI for various device sizes
 <img width="487" alt="Screenshot 2024-08-03 at 11 31 32 AM" src="https://github.com/user-attachments/assets/56a515ff-7ccc-4607-8c30-aa961d1d1993">
 
